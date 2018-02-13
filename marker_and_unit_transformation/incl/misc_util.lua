@@ -24,6 +24,14 @@ function remove_extension(filename)
    return ret[1]
 end
 
+function get_filename(path)
+   local ret = path:match("^.+/(.+)$")
+   if ret == nil then
+      ret = path:match("^.+\\(.+)$")
+   end
+   return ret
+end
+
 function all(f, container)
    local ret = true
    for k, v in pairs(container) do

@@ -1,6 +1,9 @@
 local Info       = debug.getinfo (1, 'S');
 local ScriptPath = Info.source:match[[^@?(.*[\/])[^\/]-$]];
-package.path     = ScriptPath .. '../incl/?.lua;'  .. package.path;
+
+if ScriptPath ~= nil then
+   package.path     = ScriptPath .. '../incl/?.lua;'  .. package.path;
+end
 
 require 'functional'
 require 'strict'

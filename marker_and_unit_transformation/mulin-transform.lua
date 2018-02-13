@@ -1,5 +1,25 @@
+local Info       = debug.getinfo (1, 'S');
+-- print(Info.source)
+local ScriptPath = Info.source:match[[^@?(.*[\/])[^\/]-$]];
+-- print(ScriptPath)
+-- print(package.path)
+
+if ScriptPath ~= nil then
+   package.path     =   package.path .. ';'..ScriptPath .. '?.lua';
+end
+
+
+-- print(package.path)
+
+-- print(package.path)
+
 require 'incl.algorithm'
-local argparse = require 'argparse'
+
+
+-- os.exit()
+
+
+local argparse = require 'incl.argparse'
 
 local function str_degr_to_rad(x) return math.rad((tonumber(x))) end
 
@@ -57,7 +77,16 @@ if args['translate'] ~= nil then
    args['magnitude'] = args['translate'][2]
 end
 
-require(args['infile'])
+
+local Info       = debug.getinfo (1, 'S');
+local ScriptPath = Info.source:match[[^@?(.*[\/])[^\/]-$]];
+local fPath = args['infile']:match[[^@?(.*[\/])[^\/]-$]];
+
+if fPath ~= nil then
+   package.path     = package.path .. ';'.. fPath .. '?.lua';
+end
+
+require(get_filename(args['infile']))
 
 function transform_markers(container)
    if args['rotate'] then
