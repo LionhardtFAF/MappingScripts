@@ -63,7 +63,7 @@ parser:flag('-c --copy', 'Copy objects each transformation.')
 local args = parser:parse()
 
 if args['rotate'] ~= nil then
-   args['angle'] = args['rotate'][1]
+   args['rotation angle'] = args['rotate'][1]
    args['point of rotation'] = args['rotate'][2]
 end
 
@@ -73,7 +73,7 @@ if args['project'] ~= nil then
 end
 
 if args['translate'] ~= nil then
-   args['angle'] = args['translate'][1]
+   args['translation angle'] = args['translate'][1]
    args['magnitude'] = args['translate'][2]
 end
 
@@ -92,7 +92,7 @@ function transform_markers(container)
    if args['rotate'] then
       container = rotate_entries(container,
                                  args['point of rotation'],
-                                 args['angle'],
+                                 args['rotation angle'],
                                  args['copy'],
                                  args['times'],
                                  'markers')
@@ -108,7 +108,7 @@ function transform_markers(container)
    if args['translate'] then
       container = translate_entries(container,
                                   args['magnitude'],
-                                  args['angle'],
+                                  args['translation angle'],
                                   args['copy'],
                                   args['times'],
                                   'markers')
@@ -120,7 +120,7 @@ function transform_units(container)
    if args['rotate'] then
       container = rotate_entries(container,
                                  args['point of rotation'],
-                                 args['angle'],
+                                 args['rotation angle'],
                                  args['copy'],
                                  args['times'],
                                  'units')
@@ -136,7 +136,7 @@ function transform_units(container)
    if args['translate'] then
       container = translate_entries(container,
                                   args['magnitude'],
-                                  args['angle'],
+                                  args['translation angle'],
                                   args['copy'],
                                   args['times'],
                                   'units')
