@@ -123,14 +123,15 @@ function transfrom_entries(container, copy, times, m_or_u, linear_transformation
 
       if copy then
          for key, object in pairs(deepcopy(container)) do
-            for i=1,times do
+            for i=0,times do
                container[key..'.'..tostring(i)] = transform_object(deepcopy(object), i)
             end
          end
       else
-         for i=1,times do
-            map(transform_object, container)
-         end
+         -- for i=1,times do
+         --    map(transform_object, container)
+         -- end
+         map(function(x) return transform_object(x, times) end, container)
       end
 
       return container
@@ -167,7 +168,7 @@ function transfrom_entries(container, copy, times, m_or_u, linear_transformation
             if type(v) == 'table' and v.Orientation ~= nil then
 
                -- apply rotation to unit
-               for i=1,times do
+               for i=0,times do
                   tree[k..'.'..tostring(i)] = transform_object(deepcopy(v), i)
                end
             end

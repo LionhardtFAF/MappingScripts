@@ -86,7 +86,7 @@ if fPath ~= nil then
    package.path     = package.path .. ';'.. fPath .. '?.lua';
 end
 
-require(get_filename(args['infile']))
+infile = require(get_filename(args['infile']))
 
 function transform_markers(container)
    if args['rotate'] then
@@ -125,6 +125,8 @@ function transform_units(container)
                                  args['times'],
                                  'units')
    end
+
+   
    if args['project'] then
       container = project_entries(container,
                                   args['point of projection'],
@@ -133,6 +135,10 @@ function transform_units(container)
                                   args['times'],
                                   'units')
    end
+
+   -- table.print(container)
+
+   -- os.exit()
    if args['translate'] then
       container = translate_entries(container,
                                   args['magnitude'],

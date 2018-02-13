@@ -1,7 +1,13 @@
 -- not really an excpetion function... lua sucks
 function except(message)
-   print(message)
+   -- print(message)
+   io.stderr:write(string.format(message)..'\n')
    os.exit(1)
+end
+
+function warn(message)
+   -- print(message)
+   io.stderr:write(string.format(message)..'\n')
 end
 
 -- splits string inputstr at seperator sep and returns table
@@ -21,6 +27,9 @@ end
 -- removes extension from filename
 function remove_extension(filename)
    local ret = split(filename, '.')
+   if ret[3] ~= nil then
+      warn("Warning: file names will be reduced to the part before the first dot. The file '"..filename.."' might cause unexpected behaviour.")
+   end
    return ret[1]
 end
 
@@ -77,7 +86,7 @@ function tocoords(coord_string)
    local coords = map(tonumber, split(coord_string, ','))
 
    if next(coords) == nil or tablelength(coords) ~= 2 then
-      except('Coordinate format invalid: '..coord_string..'. Required format <x-coordinate>, <y-coordinate>')
+      except('Error: Coordinate format invalid: '..coord_string..'. Required format <x-coordinate>, <y-coordinate>')
    else
       return coords
    end
