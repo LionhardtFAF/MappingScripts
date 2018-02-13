@@ -46,7 +46,16 @@ Options:
 
 ## Examples
 
-Say we have a 512x512 sized map. We want our map to be 4 way rotationally symmetric. So far we have put down 1/4 of the markers:
+Say we have a 512x512 sized map. We want our map to be 4 way rotationally symmetric. So far we have put down a few units that we want to spawn as reclaim:
 
 <img src=".data/p1.jpg" width="200">
+
+Then we executre the following command to apply 3 rotations of 90 degrees (accumulatively) and copying the units every time:
+
+lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --rotate 90 "256, 256" >| path/to/mymap_save.lua
+
+We reload our map in the edtor and find that our units have been correctly copied and rotated:
+
+<img src=".data/p2.jpg" width="200">
+
 
