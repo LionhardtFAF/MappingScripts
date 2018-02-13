@@ -63,4 +63,6 @@ We reload our map in the edtor and find that our units have been correctly copie
 
 <img src=".data/p2.jpg" width="200">
 
+We can also compose transformations. Say we want to rotate this unit, that has been offset from the center of the map by 2 sqaures, 3 times by 90 degrees and also project it 3 by a factor of 10 times. For that we invoke the script like this:
+
 
