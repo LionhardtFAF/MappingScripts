@@ -55,7 +55,7 @@ Say we have a 512x512 sized map. We want our map to be 4 way rotationally symmet
 
 <img src=".data/rotation1.jpg" width="200">
 
-Then we executre the following command to apply 3 rotations of 90 degrees (accumulatively) and copying the units every time:
+Then we execute the following command to apply 3 rotations of 90 degrees (accumulatively) and copying the units every time:
 
 `lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
