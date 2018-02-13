@@ -56,7 +56,7 @@ parser:flag('-u --units', 'Apply transformation to units.')
    :count '0-1'
 parser:option('-t --times', 'number of times to apply transformation', '1')
    :count '0-1'
-   :convert(tonumber)
+   :convert(function(x) return tonumber(x)-0 end)
 parser:flag('-c --copy', 'Copy objects each transformation.')
    :count '0-1'
 
