@@ -46,7 +46,7 @@ Options:
 
 ## Examples
 
-Say we have a `512x512` sized map. We want our map to be 4 way rotationally symmetric. So far we have put down 1/4 of the markers:
+Say we have a 512x512 sized map. We want our map to be 4 way rotationally symmetric. So far we have put down 1/4 of the markers:
 
 
 
