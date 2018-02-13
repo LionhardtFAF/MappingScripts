@@ -6,17 +6,7 @@ local function str_degr_to_rad(x) return math.rad((tonumber(x))) end
 local parser = argparse()
    :description(
       'Applies linear transformations (rotation, projection, translation) to\n'
-         ..'objects specified in an input file (<map name>_save.lua).\n'
-         ..'All transformations will be performed on the horizontal plane. Enable\n'
-         ..'"auto snap to land layer" in your map editor to make all transformed\n'
-         ..'objects accquire ground level height again after loading the map with\n'
-         ..'the data output from this script! You might need to select all objects\n'
-         ..'that were transformed and move them 1 field in any direction and then\n'
-         ..'back again for land layer snap to engage.\n'
-         ..'The output of this script will look a little messed up, but the map editor\n'
-         ..'will process it jut fine; and once you save your map, the file will be\n'
-         ..'correctly formatted again.'
-               )
+       ..'objects specified in an input file (<map name>_save.lua).')
 
 parser:argument('file', 'input file (e.g. MyMap_save.lua)')
    :convert(remove_extension)
