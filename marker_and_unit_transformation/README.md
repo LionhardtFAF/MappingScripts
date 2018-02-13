@@ -13,7 +13,7 @@ All transformations will be performed on the horizontal plane. Enable *auto snap
 ## Requirements
 
 You need the LUA interpreter. For Windows find the executable here: https://www.lua.org/download.html
-Under macOS you can use brew to install the interpreter: `$ brew intall lua`. Under Linux running aptitude you can execute `$ apt-get install lua5.3`.
+Under macOS you can use brew to install the interpreter: `$ brew intall lua`. Under Linux running APT package manager you can execute `$ apt-get install lua5.3`.
 
 
 ## Usage
