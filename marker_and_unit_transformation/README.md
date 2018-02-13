@@ -48,5 +48,5 @@ Options:
 
 Say we have a 512x512 sized map. We want our map to be 4 way rotationally symmetric. So far we have put down 1/4 of the markers:
 
-![Alt text](.data/p1.jpg?raw=true "Title")
+![before transformation](.data/p1.jpg?raw=true "before transformation")
 
