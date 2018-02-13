@@ -1,5 +1,7 @@
 # mulin-transform
 
+A script to facilitate transforming marker and unit positions of *Supreme Commander* maps.
+
 ## Overview
 
 The script *transform.lua* applies linear transformation to markers and units stored in the form of a lua table in a file (typically `<mapname>_save.lua`). The transformations supported so far are:
