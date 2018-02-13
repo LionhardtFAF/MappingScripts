@@ -82,3 +82,8 @@ We can also compose transformations. Say we want to rotate this unit 3 times by 
 `lua path/to/mulin-transform.lua math/to/mymap_save.lua -uct3 --project 2 "256, 256" --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
 <img src=".data/projrot.jpg" width="200">
+
+#TODO
+
+* Adjust units' orientation after rotation
+* make *times* option local to individual transformation
