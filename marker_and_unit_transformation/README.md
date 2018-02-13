@@ -1,4 +1,4 @@
-# transform
+# mulin-transform
 
 The script *transform.lua* applies linear transformation to markers and units stored in a `<mapname>_save.lua` file. The transformations supported so far are:
 
