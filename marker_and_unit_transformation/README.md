@@ -10,12 +10,17 @@ The script *transform.lua* applies linear transformation to markers and units st
 
 All transformations will be performed on the horizontal plane. Enable *auto snap to land layer* in your map editor to make all transformed objects accquire ground level height again after loading the map with the data output from this script! You might need to select all objects that were transformed and move them 1 field in any direction and then back again for land layer snap to engage.The output of this script will look a little messed up, but the map editor will process it jut fine; and once you save your map, the file will be correctly formatted again.
 
+## Requirements
+
+You need the LUA interpreter. For Windows find the executable here: https://www.lua.org/download.html
+Under macOS you can use brew to install the interpreter: `$ brew intall lua`. Under Linux running aptitude you can execute `$ apt-get install lua5.3`.
+
+
 ## Usage
 
 Invoke the script with the file containg the marker and unit data (this will normally be `<mapname>_save.lua`) and redirect the ouput into a new file. Then replace the old file in the folder of your map. Make sure teh new fiel has the sane name as teh old one (that is `<mapname>_save.lua`).
 
-This is the synopis of the script:
-
+This is the synopis of the script.
 ```
 Usage: mulin-transform.lua [--rotate <degrees> <point>]
        [--project <factor> <point>]
@@ -52,7 +57,7 @@ Say we have a 512x512 sized map. We want our map to be 4 way rotationally symmet
 
 Then we executre the following command to apply 3 rotations of 90 degrees (accumulatively) and copying the units every time:
 
-lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --rotate 90 "256, 256" >| path/to/mymap_save.lua
+`lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
 We reload our map in the edtor and find that our units have been correctly copied and rotated:
 
