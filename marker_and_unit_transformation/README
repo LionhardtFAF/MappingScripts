@@ -1,1 +1,3 @@
-transform.lua transform marker and unit entries specified in a <mapname>_save.lua file.
+#transform
+
+This script applies linear transformation to markers and units stored in a `<mapname>_save.lua` file.
