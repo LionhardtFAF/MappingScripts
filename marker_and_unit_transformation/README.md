@@ -20,7 +20,7 @@ Under macOS you can use brew to install the interpreter: `$ brew intall lua`. Un
 
 ## Usage
 
-Invoke the script with the file containg the marker and unit data (this will normally be `<mapname>_save.lua`) and redirect the ouput into a new file (or the same). Then replace the old file in the folder of your map. Make sure the new file has the sane name as the old one (that is `<mapname>_save.lua`).
+Invoke the script with the file containg the marker and unit data (this will normally be `<mapname>_save.lua`) and redirect the ouput into a new file (or the same). Then replace the old file in the folder of your map. Make sure the new file has the same name as the old one (that is `<mapname>_save.lua`).
 
 This is the synopis of the script.
 ```
