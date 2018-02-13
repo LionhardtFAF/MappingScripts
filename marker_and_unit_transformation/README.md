@@ -83,7 +83,7 @@ We can also compose transformations. Say we want to rotate this unit 3 times by 
 
 <img src=".data/projrot.jpg" width="200">
 
-#TODO
+# TODO
 
-* Adjust units' orientation after rotation
-* make *times* option local to individual transformation
+- Adjust units' orientation after rotation
+- make *times* option local to individual transformation
