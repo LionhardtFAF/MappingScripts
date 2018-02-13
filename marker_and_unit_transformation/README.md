@@ -75,6 +75,8 @@ and end up with this:
 
 <img src=".data/projection2.jpg" width="200">
 
-We can also compose transformations. Say we want to rotate this unit, that has been offset from the center of the map by 2 sqaures, 3 times by 90 degrees and also project it 3 by a factor of 10 times. For that we invoke the script like this:
+We can also compose transformations. Say we want to rotate this unit 3 times by 90 degrees and also again project it 3 times by a factor of 2 times. For that we invoke the script like this:
 
+`lua path/to/mulin-transform.lua math/to/mymap_save.lua -uct3 --project 2 "256, 256" --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
+<img src=".data/projrot.jpg" width="200">
