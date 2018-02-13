@@ -12,8 +12,12 @@ All transformations will be performed on the horizontal plane. Enable *auto snap
 
 ## Usage
 
+Invoke the script with the file containg the marker and unit data (this will normally be `<mapname>_save.lua`) and redirect the ouput into a new file. Then replace the old file in the folder of your map. Make sure teh new fiel has the sane name as teh old one (that is `<mapname>_save.lua`).
+
+This is the synopis of the script:
+
 ```
-Usage: transform.lua [--rotate <degrees> <point>]
+Usage: mulin-transform.lua [--rotate <degrees> <point>]
        [--project <factor> <point>]
        [--translate <degrees> <magnitude>] [-m] [-u] [-t <times>] [-c]
        [-h] <file>
@@ -38,3 +42,5 @@ Options:
    -c, --copy            Copy objects each transformation.
    -h, --help            Show this help message and exit.
 ```
+
+
