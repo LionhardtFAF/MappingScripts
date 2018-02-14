@@ -94,6 +94,6 @@ Want to fill an entire map with wall sections in a grid pattern? No? Okay... but
 
 # TODO
 
-- Adjust units' orientation after rotation
-- make *times* option local to individual transformation
-- make same transformation composable with itself arbitrarily often
+- Adjust units' orientation after rotation.
+- Make *times* option local to individual transformation.
+- Make same transformation composable with itself arbitrarily often.
