@@ -60,7 +60,7 @@ Say we have a 512x512 sized map. We want our map to be 4 way rotationally symmet
 
 Then we execute the following command to apply 3 rotations of 90 degrees (accumulatively) and copying the units every time:
 
-`lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --rotate 90 "256, 256" >| path/to/mymap_save.lua`
+`$ lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
 We reload our map in the editor and find that our units have been correctly copied and rotated:
 
@@ -72,7 +72,7 @@ Say we want to project this unit 3 times from the center by a factor of 2:
 
 We use this command:
 
-`lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --project 2 "256, 256" >| path/to/mymap_save.lua`
+`$ lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --project 2 "256, 256" >| path/to/mymap_save.lua`
 
 and end up with this:
 
@@ -80,10 +80,16 @@ and end up with this:
 
 We can also compose transformations. Say we want to rotate this unit 3 times by 90 degrees and also again project it 3 times by a factor of 2 times. For that we invoke the script like this:
 
-`lua path/to/mulin-transform.lua math/to/mymap_save.lua -uct3 --project 2 "256, 256" --rotate 90 "256, 256" >| path/to/mymap_save.lua`
+`$ lua path/to/mulin-transform.lua math/to/mymap_save.lua -uct3 --project 2 "256, 256" --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
 <img src=".data/projrot.jpg" width="200">
 
+Want to fill en entire map with wall section in a grid pattern? No problem, put down a wall section in the bottom right corner of the map and then just do something like this:
+
+`$ lua path/to/mulin-transform.lua path/to/mymap_save.lua -uct51 --translate 180 10 >| path/to/mymap_save_tmp.lua`
+`$ lua path/to/mulin-transform.lua path/to/mymap_save_tmp.lua -uct51 --translate 270 10 >| path/to/mymap_save.lua`
+
+<img src=".data/grid.jpg" width="200">
 
 # TODO
 
