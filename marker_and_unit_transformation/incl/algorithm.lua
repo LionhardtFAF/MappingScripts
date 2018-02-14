@@ -129,9 +129,6 @@ function transfrom_entries(container, copy, times, m_or_u, linear_transformation
             end
          end
       else
-         -- for i=1,times do
-         --    map(transform_object, container)
-         -- end
          map(function(x) return transform_object(x, times) end, container)
       end
 
