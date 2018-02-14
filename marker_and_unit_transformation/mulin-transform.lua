@@ -1,23 +1,11 @@
 local Info       = debug.getinfo (1, 'S');
--- print(Info.source)
 local ScriptPath = Info.source:match[[^@?(.*[\/])[^\/]-$]];
--- print(ScriptPath)
--- print(package.path)
 
 if ScriptPath ~= nil then
    package.path     =   package.path .. ';'..ScriptPath .. '?.lua';
 end
 
-
--- print(package.path)
-
--- print(package.path)
-
 require 'incl.algorithm'
-
-
--- os.exit()
-
 
 local argparse = require 'incl.argparse'
 
@@ -156,18 +144,3 @@ if args['units'] then
 end
 
 print("Scenario = "..table.tostring(Scenario))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
