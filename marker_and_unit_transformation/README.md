@@ -87,6 +87,7 @@ We can also compose transformations. Say we want to rotate this unit 3 times by 
 Want to fill en entire map with wall section in a grid pattern? No problem, put down a wall section in the bottom right corner of the map and then just do something like this:
 
 `$ lua path/to/mulin-transform.lua path/to/mymap_save.lua -uct51 --translate 180 10 >| path/to/mymap_save_tmp.lua`
+
 `$ lua path/to/mulin-transform.lua path/to/mymap_save_tmp.lua -uct51 --translate 270 10 >| path/to/mymap_save.lua`
 
 <img src=".data/grid.jpg" width="200">
@@ -95,3 +96,4 @@ Want to fill en entire map with wall section in a grid pattern? No problem, put 
 
 - Adjust units' orientation after rotation
 - make *times* option local to individual transformation
+- make same transformation composable with itself arbitrarily often
