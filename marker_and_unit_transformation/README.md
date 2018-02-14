@@ -80,7 +80,7 @@ and end up with this:
 
 We can also compose transformations. Say we want to rotate this unit 3 times by 90 degrees and also again project it 3 times by a factor of 2 times. For that we invoke the script like this:
 
-`$ lua path/to/mulin-transform.lua math/to/mymap_save.lua -uct3 --project 2 "256, 256" --rotate 90 "256, 256" >| path/to/mymap_save.lua`
+`$ lua path/to/mulin-transform.lua path/to/mymap_save.lua -uct3 --project 2 "256, 256" --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
 <img src=".data/projrot.jpg" width="200">
 
