@@ -2,15 +2,17 @@
 
 A script to facilitate transforming marker and unit positions of *Supreme Commander* maps.
 
+
 ## Overview
 
-The script *transform.lua* applies linear transformation to markers and units stored in the form of a lua table in a file (typically `<mapname>_save.lua`). The transformations supported so far are:
+The script *transform.lua* applies linear transformations to markers and units stored in the form of a lua table in a file (typically `<mapname>_save.lua`). The transformations supported so far are:
 
 * **rotation**    : rotates markers or units around a specified point on the map by a given angle
 * **projection**  : projects markers or units from a specified point by a given factor
 * **translation** : translates units or markers in a given direction by a given distance 
 
-All transformations will be performed on the horizontal plane. Enable *auto snap to land layer* in your map editor to make all transformed objects accquire ground level height again after loading the map with the data output from this script! You might need to select all objects that were transformed and move them 1 field in any direction and then back again for land layer snap to engage.The output of this script will look a little messed up, but the map editor will process it jut fine; and once you save your map, the file will be correctly formatted again.
+All transformations will be performed on the horizontal plane. Enable *auto snap to land layer* in your map editor to make all transformed objects accquire ground level height again after loading the map with the data output from this script! You might need to select all objects that were transformed and move them 1 field in any direction and then back again for land layer snap to engage. The output of this script will look a little messed up, but the map editor will process it jut fine; and once you save your map, the file will be correctly formatted again.
+
 
 ## Requirements
 
@@ -20,17 +22,16 @@ Under macOS you can use brew to install the interpreter: `$ brew intall lua`. Un
 
 ## Usage
 
-Invoke the script with the file containg the marker and unit data (this will normally be `<mapname>_save.lua`) and redirect the ouput into a new file (or the same). Then replace the old file in the folder of your map. Make sure the new file has the same name as the old one (that is `<mapname>_save.lua`).
+Invoke the script with the file containing the marker and unit data (this will normally be `<mapname>_save.lua`) and redirect the ouput into a new file (or the same). Then replace the old file in the folder of your map. Make sure the new file has the same name as the old one (that is `<mapname>_save.lua`).
 
-This is the synopis of the script.
+This is the synopsis of the script:
 ```
 Usage: mulin-transform.lua [--rotate <degrees> <point>]
        [--project <factor> <point>]
        [--translate <degrees> <magnitude>] [-m] [-u] [-t <times>] [-c]
        [-h] <file>
 
-Applies linear transformations (rotation, projection, translation) to
-objects specified in an input file (<map name>_save.lua).
+Applies linear transformations (rotation, projection, translation) to objects specified in an input file (<map name>_save.lua).
 
 Arguments:
    file                  input file (e.g. MyMap_save.lua)
@@ -61,7 +62,7 @@ Then we execute the following command to apply 3 rotations of 90 degrees (accumu
 
 `lua path/to/mulin-transform.lua path/to/mymap_save.lua  -uct3 --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
-We reload our map in the edtor and find that our units have been correctly copied and rotated:
+We reload our map in the editor and find that our units have been correctly copied and rotated:
 
 <img src=".data/rotation2.jpg" width="200">
 
@@ -82,6 +83,7 @@ We can also compose transformations. Say we want to rotate this unit 3 times by 
 `lua path/to/mulin-transform.lua math/to/mymap_save.lua -uct3 --project 2 "256, 256" --rotate 90 "256, 256" >| path/to/mymap_save.lua`
 
 <img src=".data/projrot.jpg" width="200">
+
 
 # TODO
 
