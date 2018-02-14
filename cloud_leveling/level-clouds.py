@@ -21,3 +21,4 @@ if __name__ == '__main__':
     parser.add_argument('height', help='the height to assign to all cloud objects')
 
     args = parser.parse_args()
+    level_clouds(args.file, args.height)
