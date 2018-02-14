@@ -4,4 +4,4 @@ A script to adjust the heights of all clouds specified in a <mapname>_save.lua f
 
 # Requirements
 
-You need Python 3.xa and the argparse module
+You need Python 3.x and the argparse module
