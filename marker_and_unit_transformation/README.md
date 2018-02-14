@@ -84,7 +84,7 @@ We can also compose transformations. Say we want to rotate this unit 3 times by 
 
 <img src=".data/projrot.jpg" width="200">
 
-Want to fill en entire map with wall section in a grid pattern? No problem, put down a wall section in the bottom right corner of the map and then just do something like this:
+Want to fill an entire map with wall sections in a grid pattern? No problem, put down a wall section in the bottom right corner of the map and then just do something like this:
 
 `$ lua path/to/mulin-transform.lua path/to/mymap_save.lua -uct51 --translate 180 10 >| path/to/mymap_save_tmp.lua`
 
