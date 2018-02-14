@@ -78,6 +78,7 @@ if args['translate'] ~= nil then
 end
 
 
+
 local Info       = debug.getinfo (1, 'S');
 local ScriptPath = Info.source:match[[^@?(.*[\/])[^\/]-$]];
 local fPath = args['infile']:match[[^@?(.*[\/])[^\/]-$]];
@@ -135,10 +136,6 @@ function transform_units(container)
                                   args['times'],
                                   'units')
    end
-
-   -- table.print(container)
-
-   -- os.exit()
    if args['translate'] then
       container = translate_entries(container,
                                   args['magnitude'],

@@ -48,7 +48,7 @@ function translate_entries(container, magnitude, angle, copy, times, m_or_u)
    -- wil have a meta_factor of n, e.g. applying a rotation of d degrees n times
    -----------------------------------------------------------
    local function translate(v, meta_factor)
-      return {v[1]+translation_vector[1], v[2], v[3]+translation_vector[2]}
+      return {v[1]+meta_factor*translation_vector[1], v[2], v[3]+meta_factor*translation_vector[2]}
    end
    -----------------------------------------------------------
 
