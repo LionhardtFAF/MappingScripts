@@ -5,7 +5,7 @@ A script to facilitate transforming marker and unit positions of *Supreme Comman
 
 ## Overview
 
-The script *mulin-transform.lua* applies linear transformations to markers and units stored in the form of a lua table in a file (typically `<mapname>_save.lua`). The transformations supported so far are:
+The script *mulin-transform.lua* applies affine transformations to markers and units stored in the form of a lua table in a file (typically `<mapname>_save.lua`). The transformations supported so far are:
 
 * **rotation**    : rotates markers or units around a specified point on the map by a given angle
 * **projection**  : projects markers or units from a specified point by a given factor
@@ -31,7 +31,7 @@ Usage: mulin-transform.lua [--rotate <degrees> <point>]
        [--translate <degrees> <magnitude>] [-m] [-u] [-t <times>] [-c]
        [-h] <file>
 
-Applies linear transformations (rotation, projection, translation) to objects specified in an input file (<map name>_save.lua).
+Applies affine transformations (rotation, projection, translation) to objects specified in an input file (<map name>_save.lua).
 
 Arguments:
    file                  input file (e.g. MyMap_save.lua)
